@@ -145,8 +145,6 @@ const BookSchema: Schema = new Schema({
 
 export default mongoose.model<IBook>('Book', BookSchema);
 Controller para Livros (bookController.ts)
-typescript
-Copiar código
 import { Request, Response } from 'express';
 import Book from '../models/bookModel';
 
