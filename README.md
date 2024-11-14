@@ -76,7 +76,7 @@ Crie um banco de dados no SQL e configure a URL de conexão em um `arquivo .env`
 
 
 ```bash
-SQL_URI=mongodb://localhost:27017/nome-do-banco
+SQL_URI=SLQ://localhost:27017/nome-do-banco
 JWT_SECRET=sua_chave_secreta
 Inicie o servidor:
 ```
