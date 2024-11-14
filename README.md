@@ -122,10 +122,7 @@ Teste a API: Use o Postman ou Insomnia para testar as rotas e funcionalidades da
 
 #Exemplo de Código
 
-```bash
-Modelo de Livro (bookModel.ts)
-typescript
-```
+Modelo de Livro (`bookModel.ts`)
 
 ```bash
 import SQL, { Schema, Document } from 'mongoose';
