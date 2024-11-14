@@ -2,7 +2,7 @@
 
 Este projeto é um backend focado no desenvolvimento de uma API RESTful para gerenciamento de uma biblioteca, que permite cadastrar livros, gerenciar usuários e monitorar suas atividades (como empréstimos e devoluções de livros). O projeto tem como objetivo principal fortalecer conhecimentos em desenvolvimento de APIs, arquitetura REST e manipulação de dados com foco em funcionalidades de uma biblioteca.
 
-#Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Node.js: Plataforma de execução JavaScript no servidor.
 
@@ -55,7 +55,7 @@ Para rodar este projeto, você precisa ter:
 
 - Sistema de Empréstimos: Controle e registre o histórico de empréstimos de cada usuário.
 
-#Configuração e Instalação
+## Configuração e Instalação
 
 - Clone o repositório:
 
@@ -120,7 +120,7 @@ Teste a API: Use o Postman ou Insomnia para testar as rotas e funcionalidades da
 
 - PUT `/api/loans/return`: Registra a devolução de um livro emprestado (requer autenticação).
 
-#Exemplo de Código
+## Exemplo de Código
 
 Modelo de Livro (`bookModel.ts`)
 
@@ -168,7 +168,7 @@ export const getBooks = async (_req: Request, res: Response) => {
 };
 ```
 
-#Testes
+## Testes
 
 Este projeto pode ser expandido com testes unitários e de integração para validar o funcionamento dos endpoints e garantir a confiabilidade da aplicação.
 
