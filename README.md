@@ -122,7 +122,7 @@ Teste a API: Use o Postman ou Insomnia para testar as rotas e funcionalidades da
 
 ## Exemplo de Código
 
-Modelo de Livro (`bookModel.ts`)
+- Modelo de Livro (`bookModel.ts`)
 
 ```bash
 import SQL, { Schema, Document } from 'SQL';
