@@ -125,7 +125,7 @@ Teste a API: Use o Postman ou Insomnia para testar as rotas e funcionalidades da
 Modelo de Livro (`bookModel.ts`)
 
 ```bash
-import SQL, { Schema, Document } from 'mongoose';
+import SQL, { Schema, Document } from 'SQL';
 
 export interface IBook extends Document {
   title: string;
