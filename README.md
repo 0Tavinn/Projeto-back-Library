@@ -83,8 +83,9 @@ Inicie o servidor:
 
 ```bash
 npm start
-Teste a API: Use o Postman ou Insomnia para testar as rotas e funcionalidades da API.
 ```
+
+- Teste a API: Use o Postman ou Insomnia para testar as rotas e funcionalidades da API.
 
 # Autenticação
 
