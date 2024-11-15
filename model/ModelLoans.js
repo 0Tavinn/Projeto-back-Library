@@ -95,28 +95,28 @@ class ModelUser {
     }
     async getBooksAndUsersReports() {
         try {
-          const sql = `
-            (
-              SELECT livro_idlivro AS id, livro.titulo AS nome_livro, COUNT(*) AS quantidade_de_emprestimo, 'livro mais EMPRESTADO' AS tipo
+          const sqlLivrosMaisEmprestados = `
+              SELECT livro_idlivro AS id_livro, livro.titulo AS nome_livro, COUNT(*) AS quantidade_de_emprestimo, 'livro mais EMPRESTADO' AS tipo
               FROM emprestimo
               INNER JOIN livro ON livro.idlivro = emprestimo.livro_idlivro
               GROUP BY livro_idlivro
               ORDER BY quantidade_de_emprestimo DESC
               LIMIT 10
-            )
-            UNION
-            (
-              SELECT usuario_idusuario AS id, usuario.nome AS nome_usuario, COUNT(*) AS quantidade_de_emprestimo, 'usuario com PENDÊNCIA' AS tipo
+            `
+            const sqlUsuariosComPendencia = `
+              SELECT usuario_idusuario AS id_usuario, usuario.nome AS nome_usuario, COUNT(*) AS quantidade_de_emprestimo, 'usuario com PENDÊNCIA' AS tipo
               FROM emprestimo
               INNER JOIN usuario ON usuario.idusuario = emprestimo.usuario_idusuario
               WHERE status = 'PENDENTE'
               GROUP BY usuario_idusuario
               HAVING quantidade_de_emprestimo > 0
-            )
-            ORDER BY tipo DESC
+              ORDER BY quantidade_de_emprestimo DESC
           `;
-          const result = await this._HandleDBMSMySQL.query(sql);
-          return { data: result };
+          const LivrosMaisEmprestados = await this._HandleDBMSMySQL.query(sqlLivrosMaisEmprestados);
+          const UsuariosComPendencia = await this._HandleDBMSMySQL.query(sqlUsuariosComPendencia);
+
+          return {LivrosMaisEmprestados, UsuariosComPendencia};
+          
         } catch (error) {
           throw new Error(`Erro ao gerar o relatório combinado: ${error.message}`);
         }
