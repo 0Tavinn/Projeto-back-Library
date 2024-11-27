@@ -168,6 +168,26 @@ export const getBooks = async (_req: Request, res: Response) => {
   }
 };
 ```
+## CRIAÇÃO DO BANCO DE DADOS
+
+#Em “api” no diretório “sql”, copie o conteúdo contido no arquivo *dump*  e cole no MySQL WorkBank e execute-o na ordem que está. Isso criará todo o banco de dados da api junto com o usuário admin e os privilégios.
+
+ Detalhe: Para que funcione você tem que ter algum servidor de banco de dados ativo, como MySQL, MariaDB etc.
+
+- RODANDO O PROJETO
+ Após criar o banco e tudo der certo.
+
+ Abra o terminal em Bash e digite o comando: `cd api` . para entrar na pasta da api. 
+
+E  em seguida digite: `npm run dev`. para iniciar a aplicação do express.
+
+Se estiver rodando normalmente a api, abra um novo terminal em powershell e execute o comando: `cd frontend` para entrar no diretório do front.
+
+- Digite: `npm install --global yarn` Isso instalará o Yarn globalmente no seu sistema.
+
+- Agora digite: `Yarn start`, para executar a página no local: http://localhost:3000.
+
+Se não exibir nenhum erro nos dois terminais, tudo estará rodando normalmente. Faça testes como inserir usuário e livro e simular um empréstimo para verificar se tudo está operando normalmente, relate algum erro se tiver.
 
 ## Testes
 
