@@ -1,15 +1,22 @@
 -- Active: 1730852531018@@127.0.0.1@3306@biblioteca
 -- -----------------------------------------------------
 -- Criação do usuario admin
--- Obs:. com servidor ativo, a criaçãodo usuario deve ser no MySQL workbank e depois criar a conexão aqui no vscode.
+-- Obs:. com servidor ativo, a criaçãodo do banco e do usuario deve ser no MySQL workbank e depois criar a conexão aqui no vscode.
+-- Ou execute tudo no WorkBank.
 -- -----------------------------------------------------
-create user 'admin'@'%' identified by 'admin';
+-- Cria um banco de dados chamado 'biblioteca'
+create database biblioteca;
+-- Cria um novo usuário chamado 'admin' com senha 'admin' e permite acesso de qualquer host
+create user 'admin'@'%' identified WITH mysql_native_password by 'admin';
+
+-- Concede todos os privilégios no banco de dados 'biblioteca' ao usuário 'admin'
+grant all privileges on biblioteca.* to 'admin'@'%';
+
 -- -----------------------------------------------------
 -- Permissão de acesso para o usuario admin
 -- Obs:. só funcionará aqui no Vscode, se o banco de dados já estiver criado.
 -- -----------------------------------------------------
-grant all privileges on biblioteca.* to 'admin'@'%';
-create database biblioteca;
+
 use biblioteca;
 CREATE TABLE IF NOT EXISTS `biblioteca`.`usuario` (
   `idusuario` INT NOT NULL AUTO_INCREMENT,
@@ -59,8 +66,5 @@ CREATE TABLE IF NOT EXISTS `biblioteca`.`emprestimo` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-ALTER TABLE biblioteca.emprestimo DROP COLUMN data_devolucao_temp;
 
 select * from biblioteca.emprestimo;
-ALTER TABLE biblioteca.emprestimo 
-MODIFY COLUMN data_emprestimo char(20) NOT NULL;
