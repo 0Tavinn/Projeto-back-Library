@@ -16,6 +16,15 @@ Este projeto é um backend focado no desenvolvimento de uma API RESTful para ger
 
 - JWT (JSON Web Token): Gerenciamento de autenticação e autorização para controle de acesso aos endpoints.
 
+## Fluxograma do Fluxo de Trabalho
+
+ Desenvolveremos um fluxograma que ilustra:
+
+- Entrada de Dados: O usuário acessa o sistema via requisições HTTP (REST API).
+- Validação de Autenticação: Middleware verifica autenticação (JWT).
+- Operação no Banco de Dados: Controladores processam requisições (e.g., cadastro, consulta, ou alteração).
+- Resposta ao Usuário: Dados são enviados como resposta HTTP.
+
 # Pré-requisitos
 
 Para rodar este projeto, você precisa ter:
