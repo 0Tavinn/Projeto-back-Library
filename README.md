@@ -179,7 +179,8 @@ export const getBooks = async (_req: Request, res: Response) => {
 ```
 ## CRIAÇÃO DO BANCO DE DADOS
 
-#Em “api” no diretório “sql”, copie o conteúdo contido no arquivo *dump*  e cole no MySQL WorkBank e execute-o na ordem que está. Isso criará todo o banco de dados da api junto com o usuário admin e os privilégios.
+ Em “api” no diretório “sql”, copie o conteúdo contido no arquivo *dump*  e cole no MySQL WorkBank e execute-o na ordem que está. Isso criará todo o banco de dados da 
+ api junto com o usuário admin e os privilégios.
 
  Detalhe: Para que funcione você tem que ter algum servidor de banco de dados ativo, como MySQL, MariaDB etc.
 
