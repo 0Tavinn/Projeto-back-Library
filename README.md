@@ -214,10 +214,6 @@ Este projeto pode ser aprimorado com as seguintes funcionalidades:
 
 - Paginação: Implementar paginação nas listas de livros e usuários para melhorar a performance.
 
-# Contribuições
-
-Este projeto é aberto para contribuições! Sinta-se à vontade para abrir issues e enviar pull requests com melhorias e correções.
-
 # Licença
 
 Este projeto é apenas para fins educativos e acadêmicos. Consulte os termos de uso para mais detalhes.
