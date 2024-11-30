@@ -46,8 +46,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `biblioteca`.`emprestimo` (
   `idemprestimo` INT NOT NULL AUTO_INCREMENT,
-  `data_emprestimo` char(10) NOT NULL,
-  `data_devolucao` char(10) NOT NULL,
+  `data_emprestimo` char(20) NOT NULL,
+  `data_devolucao` char(20) NOT NULL,
   `status` VARCHAR(45) NOT NULL,
   `livro_idlivro` INT NOT NULL,
   `usuario_idusuario` INT NOT NULL,
@@ -68,3 +68,5 @@ ENGINE = InnoDB;
 
 
 select * from biblioteca.emprestimo;
+ALTER TABLE emprestimo MODIFY COLUMN data_emprestimo char(20) NOT NULL;
+ALTER TABLE emprestimo MODIFY COLUMN data_devolucao char(20) NOT NULL;
