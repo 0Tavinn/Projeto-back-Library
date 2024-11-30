@@ -80,7 +80,7 @@ const Navebar = ({onEdit}) => {
         <Navbar ref={ref}>
           <Logo>
             <img src="https://w7.pngwing.com/pngs/606/201/png-transparent-mississauga-library-system-school-library-public-library-online-public-access-catalog-library-miscellaneous-trademark-logo.png" alt="Logo" />
-            <span><h2>Lumina Library</h2></span>
+            <span><h2>Phibus Library</h2></span>
           </Logo>
           <H1>Sistema de Gerenciamento de Biblioteca</H1>
           <ProfileSection>

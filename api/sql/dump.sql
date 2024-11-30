@@ -68,5 +68,5 @@ ENGINE = InnoDB;
 
 
 select * from biblioteca.emprestimo;
-ALTER TABLE emprestimo MODIFY COLUMN data_emprestimo char(20) NOT NULL;
-ALTER TABLE emprestimo MODIFY COLUMN data_devolucao char(20) NOT NULL;
+-- ALTER TABLE emprestimo MODIFY COLUMN data_emprestimo char(20) NOT NULL;
+-- ALTER TABLE emprestimo MODIFY COLUMN data_devolucao char(20) NOT NULL;
